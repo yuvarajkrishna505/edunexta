@@ -92,7 +92,7 @@ export default function Footer() {
               </li>
               <li className={styles.contactItem}>
                 <Phone size={18} className={styles.contactIcon} />
-                <a href="tel:+919591390860" className={styles.contactLink}>+91 95913 90860</a>
+                <a href="tel:+919901213373" className={styles.contactLink}>+91 99012 13373</a>
               </li>
               <li className={styles.contactItem}>
                 <Mail size={18} className={styles.contactIcon} />
@@ -101,7 +101,7 @@ export default function Footer() {
             </ul>
             
             <a 
-              href="https://wa.me/919591390860?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20your%20placement%20record." 
+              href="https://wa.me/919901213373?text=Hi!%20I'd%20like%20to%20learn%20more%20about%20your%20placement%20record." 
               target="_blank" 
               rel="noopener noreferrer" 
               className={styles.whatsappBtn}

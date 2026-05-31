@@ -132,7 +132,7 @@ export default function Navbar() {
 
       {/* WhatsApp Quick Action Widget */}
       <a 
-        href="https://wa.me/919591390860?text=Hi%20EduNexta,%20I'm%20interested%20in%20mastering%20AI-powered%20digital%20marketing.%20Can%20I%20speak%20to%20a%20mentor?" 
+        href="https://wa.me/919901213373?text=Hi%20EduNexta,%20I'm%20interested%20in%20mastering%20AI-powered%20digital%20marketing.%20Can%20I%20speak%20to%20a%20mentor?" 
         target="_blank" 
         rel="noopener noreferrer" 
         className={styles.whatsappWidget}
