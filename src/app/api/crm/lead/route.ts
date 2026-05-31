@@ -1,17 +1,14 @@
 import { NextResponse } from 'next/server';
 
-// Simulating database storage for leads
-let leadSubmissions: any[] = [];
-
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, phone, course, workExperience, source } = body;
+    const { name, email, phone } = body;
 
     // Advanced backend validation
-    if (!name || !email || !phone || !course) {
+    if (!name || !email || !phone) {
       return NextResponse.json(
-        { success: false, message: 'All mandatory fields (name, email, phone, course) must be provided.' },
+        { success: false, message: 'All mandatory fields (name, email, phone) must be provided.' },
         { status: 400 }
       );
     }
@@ -23,47 +20,56 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+    
+    if (!/^\d{10}$/.test(phone)) {
+      return NextResponse.json(
+        { success: false, message: 'Invalid WhatsApp number format. Must be exactly 10 digits.' },
+        { status: 400 }
+      );
+    }
 
-    // Lead payload constructed for CRM synchronization
-    const leadPayload = {
-      leadId: `lead_${Date.now()}_${Math.random().toString(36).substr(2, 5)}`,
-      name,
-      email,
-      phone,
-      course,
-      workExperience: workExperience || 'Not specified',
-      submittedAt: new Date().toISOString(),
-      source: source || 'Direct Web enquiry',
-      status: 'NEW',
-      syncStatus: {
-        hubspot: 'SUCCESS_SYNC_201',
-        salesforce: 'ENQUEUED_BATCH',
-        webhookTriggered: true
-      }
+    // Google Sheets Integration
+    const webhookUrl = process.env.GOOGLE_WEBHOOK_URL;
+    
+    if (!webhookUrl) {
+      console.warn('GOOGLE_WEBHOOK_URL is not set. Simulating success for local testing.');
+      return NextResponse.json({
+        success: true,
+        message: 'Your enquiry was processed successfully.',
+      });
+    }
+
+    // Sanitize inputs slightly
+    const sanitizedData = {
+      name: name.trim().replace(/[<>]/g, ''),
+      email: email.trim().toLowerCase(),
+      phone: phone.trim()
     };
 
-    // Logging simulated CRM and Webhook Syncs
-    console.log('=============== MOCK CRM WEBHOOK TRIGGERED ===============');
-    console.log(`Payload routed successfully to HubSpot Marketing Hub:`, JSON.stringify(leadPayload, null, 2));
-    console.log(`Triggering standard webhook endpoint: https://api.edunexta.com/webhooks/v1/leads`);
-    console.log('==========================================================');
-
-    leadSubmissions.push(leadPayload);
-
-    return NextResponse.json({
-      success: true,
-      message: 'Your enquiry was processed successfully. Our education advisor will connect with you on WhatsApp within 15 minutes!',
-      leadId: leadPayload.leadId,
-      crmSync: leadPayload.syncStatus
+    const response = await fetch(webhookUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(sanitizedData),
     });
-  } catch (error: any) {
-    return NextResponse.json({ success: false, message: error.message }, { status: 500 });
-  }
-}
 
-export async function GET() {
-  return NextResponse.json({
-    totalLeads: leadSubmissions.length,
-    leads: leadSubmissions
-  });
+    if (!response.ok) {
+      throw new Error(`Google Apps Script responded with status: ${response.status}`);
+    }
+
+    const resData = await response.json();
+
+    if (resData.status === 'success') {
+      return NextResponse.json({
+        success: true,
+        message: 'Your enquiry was processed successfully. Our education advisor will connect with you on WhatsApp within 15 minutes!',
+      });
+    } else {
+      throw new Error(resData.message || 'Unknown error from Google Apps Script');
+    }
+  } catch (error: any) {
+    console.error('Lead Submission Error:', error);
+    return NextResponse.json({ success: false, message: 'Failed to process submission. Please try again later.' }, { status: 500 });
+  }
 }
