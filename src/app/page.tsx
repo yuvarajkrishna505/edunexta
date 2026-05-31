@@ -339,7 +339,7 @@ export default function HomePage() {
                 Apply & Speak with Advisor <Sparkles size={16} />
               </button>
               <a 
-                href="https://wa.me/919876543210?text=Hi!%20I'd%20like%20to%20apply%20to%20EduNexta." 
+                href="https://wa.me/919591390860?text=Hi!%20I'd%20like%20to%20apply%20to%20EduNexta." 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className={styles.ctaBtnSecondary}

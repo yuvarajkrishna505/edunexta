@@ -57,7 +57,7 @@ export default function ContactPage() {
                     </li>
                     <li className={styles.infoItem}>
                       <Phone size={18} className={styles.infoIcon} />
-                      <a href="tel:+919876543210">+91 98765 43210</a>
+                      <a href="tel:+919591390860">+91 95913 90860</a>
                     </li>
                     <li className={styles.infoItem}>
                       <Mail size={18} className={styles.infoIcon} />
@@ -66,7 +66,7 @@ export default function ContactPage() {
                   </ul>
 
                   <a 
-                    href="https://wa.me/919876543210?text=Hi!%20I%20have%20an%20admissions%20query." 
+                    href="https://wa.me/919591390860?text=Hi!%20I%20have%20an%20admissions%20query." 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className={styles.whatsappBtn}
