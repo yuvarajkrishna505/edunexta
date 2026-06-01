@@ -1,5 +1,5 @@
 .page {
-  --background: #fafafa;
+  --background: #F5F3F6;
   --foreground: #fff;
 
   --text-primary: #000;
@@ -26,7 +26,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  background-color: var(--foreground);
+  background-color: transparent;
   padding: 120px 60px;
 }
 
