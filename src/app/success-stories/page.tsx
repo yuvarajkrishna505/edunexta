@@ -1,31 +1,17 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   Trophy, TrendingUp, Star, Users, Play, Quote, ShieldCheck, ChevronRight, CheckCircle2
 } from 'lucide-react';
 import styles from './successStories.module.css';
+import { initialTestimonials } from '@/utils/data';
 
 export default function SuccessStoriesPage() {
-  const [testimonials, setTestimonials] = useState<any[]>([]);
+  const [testimonials] = useState<any[]>(initialTestimonials);
   
   // Interactive Growth Slider
   const [inputSalary, setInputSalary] = useState(3.5); // Initial salary in LPA
-
-  useEffect(() => {
-    const fetchCMS = async () => {
-      try {
-        const response = await fetch('/api/cms');
-        if (response.ok) {
-          const data = await response.json();
-          setTestimonials(data.testimonials || []);
-        }
-      } catch (err) {
-        console.error('Failed to load testimonials.', err);
-      }
-    };
-    fetchCMS();
-  }, []);
 
   // Compute standard growth outcomes
   const estimatedHikePercent = inputSalary < 5 ? 150 : inputSalary < 8 ? 120 : 90;

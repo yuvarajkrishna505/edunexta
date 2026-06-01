@@ -74,11 +74,6 @@ export default function Footer() {
                   Contact Support
                 </Link>
               </li>
-              <li>
-                <Link href="/admin" className={styles.link}>
-                  CMS Admin Dashboard
-                </Link>
-              </li>
             </ul>
           </div>
 

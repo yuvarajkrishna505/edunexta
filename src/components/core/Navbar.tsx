@@ -24,8 +24,7 @@ export default function Navbar() {
     { name: 'Courses', path: '/courses' },
     { name: 'Success Stories', path: '/success-stories' },
     { name: 'About Us', path: '/about' },
-    { name: 'Contact', path: '/contact' },
-    { name: 'Admin (CMS)', path: '/admin' }
+    { name: 'Contact', path: '/contact' }
   ];
 
   useEffect(() => {

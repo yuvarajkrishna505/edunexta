@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
   Sparkles, Award, ArrowUpRight, TrendingUp, Users, CheckCircle2, ChevronDown, 
@@ -11,37 +11,20 @@ import Modal from '@/components/ui/Modal';
 import EnquiryForm from '@/components/core/EnquiryForm';
 import Toast from '@/components/ui/Toast';
 import SchemaMarkup from '@/components/core/SchemaMarkup';
+import { initialTestimonials, initialFAQs } from '@/utils/data';
 
 export default function HomePage() {
   // Modal controllers
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
   const [selectedCourseSlug, setSelectedCourseSlug] = useState('');
   
-  // Dynamic CMS state
-  const [testimonials, setTestimonials] = useState<any[]>([]);
-  const [faqs, setFaqs] = useState<any[]>([]);
+  // Static CMS state
+  const [testimonials] = useState<any[]>(initialTestimonials);
+  const [faqs] = useState<any[]>(initialFAQs);
   const [activeFaq, setActiveFaq] = useState<string | null>(null);
   const [activeFaqCategory, setActiveFaqCategory] = useState('General');
-  
   const [toastMessage, setToastMessage] = useState('');
   const [toastType, setToastType] = useState<'success' | 'error'>('success');
-
-  // Fetch CMS data
-  useEffect(() => {
-    const fetchCmsData = async () => {
-      try {
-        const response = await fetch('/api/cms');
-        if (response.ok) {
-          const data = await response.json();
-          setTestimonials(data.testimonials || []);
-          setFaqs(data.faqs || []);
-        }
-      } catch (err) {
-        console.error('Failed to load dynamic CMS data.', err);
-      }
-    };
-    fetchCmsData();
-  }, []);
 
   const handleEnquirySuccess = (msg: string) => {
     setToastType('success');

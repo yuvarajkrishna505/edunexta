@@ -12,6 +12,7 @@ import EnquiryForm from '@/components/core/EnquiryForm';
 import CalendarScheduler from '@/components/sections/CalendarScheduler';
 import Toast from '@/components/ui/Toast';
 import SchemaMarkup from '@/components/core/SchemaMarkup';
+import { initialCourses } from '@/utils/data';
 
 export default function CourseDetailPage() {
   const params = useParams();
@@ -30,24 +31,12 @@ export default function CourseDetailPage() {
   const [toastType, setToastType] = useState<'success' | 'error'>('success');
 
   useEffect(() => {
-    const fetchCourse = async () => {
-      try {
-        const response = await fetch('/api/cms');
-        if (response.ok) {
-          const data = await response.json();
-          const found = data.courses?.find((c: any) => c.slug === slug);
-          if (found) {
-            setCourse(found);
-          }
-        }
-      } catch (err) {
-        console.error('Failed to load course details.', err);
-      } finally {
-        setLoading(false);
-      }
-    };
     if (slug) {
-      fetchCourse();
+      const found = initialCourses.find((c: any) => c.slug === slug);
+      if (found) {
+        setCourse(found);
+      }
+      setLoading(false);
     }
   }, [slug]);
 

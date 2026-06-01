@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
   Sparkles, Award, ArrowUpRight, Cpu, Clock, Star, Users, Check, Filter, Calendar
@@ -9,9 +9,10 @@ import styles from './courses.module.css';
 import Modal from '@/components/ui/Modal';
 import EnquiryForm from '@/components/core/EnquiryForm';
 import Toast from '@/components/ui/Toast';
+import { initialCourses } from '@/utils/data';
 
 export default function CoursesCatalogPage() {
-  const [courses, setCourses] = useState<any[]>([]);
+  const [courses] = useState<any[]>(initialCourses);
   const [selectedLevel, setSelectedLevel] = useState('All');
   
   // Lead state
@@ -20,21 +21,6 @@ export default function CoursesCatalogPage() {
   
   const [toastMessage, setToastMessage] = useState('');
   const [toastType, setToastType] = useState<'success' | 'error'>('success');
-
-  useEffect(() => {
-    const fetchCourses = async () => {
-      try {
-        const response = await fetch('/api/cms');
-        if (response.ok) {
-          const data = await response.json();
-          setCourses(data.courses || []);
-        }
-      } catch (err) {
-        console.error('Failed to load courses from CMS.', err);
-      }
-    };
-    fetchCourses();
-  }, []);
 
   const handleEnquirySuccess = (msg: string) => {
     setToastType('success');
