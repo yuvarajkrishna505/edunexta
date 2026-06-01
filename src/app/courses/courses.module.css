@@ -38,12 +38,12 @@
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(107, 70, 193, 0.1);
+  border: 1px solid rgba(107, 70, 193, 0.2);
   border-radius: 50px;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--accent-color);
+  color: var(--secondary-color);
   margin: 0 auto 20px;
   width: max-content;
   text-transform: uppercase;
@@ -52,7 +52,7 @@
 .title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 16px;
 }
 
@@ -81,8 +81,8 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
   padding: 16px 24px;
   border-radius: 16px;
   margin-bottom: 40px;
@@ -102,7 +102,7 @@
   gap: 8px;
   font-weight: 600;
   font-size: 0.9rem;
-  color: #FFFFFF;
+  color: var(--text-primary);
 }
 
 .filterGroup {
@@ -114,7 +114,7 @@
 .filterBtn {
   padding: 8px 18px;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid #E2E8F0;
   border-radius: 50px;
   color: var(--text-secondary);
   font-size: 0.85rem;
@@ -124,8 +124,8 @@
 }
 
 .filterBtn:hover {
-  background: rgba(255, 255, 255, 0.05);
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: var(--primary-color);
 }
 
 .activeFilter {
@@ -193,7 +193,7 @@
 .courseTitle {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 10px;
   line-height: 1.4;
 }
@@ -211,8 +211,8 @@
   flex-direction: column;
   gap: 8px;
   padding: 16px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  border-top: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
   margin-bottom: 20px;
 }
 
@@ -221,7 +221,7 @@
   align-items: center;
   gap: 10px;
   font-size: 0.8rem;
-  color: #E2E8F0;
+  color: var(--text-secondary);
   font-weight: 500;
 }
 
@@ -258,8 +258,8 @@
   gap: 4px;
   font-size: 0.75rem;
   color: var(--text-secondary);
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
   padding: 4px 8px;
   border-radius: 6px;
 }
@@ -268,7 +268,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-top: 1px solid #E2E8F0;
   padding-top: 20px;
 }
 
@@ -281,7 +281,7 @@
 .price {
   font-size: 1.4rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-primary);
 }
 
 .originalPrice {
@@ -319,10 +319,10 @@
 .applyBtn {
   flex: 1;
   padding: 12px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
-  color: #E2E8F0;
+  color: var(--text-secondary);
   font-weight: 600;
   font-size: 0.85rem;
   cursor: pointer;
@@ -330,7 +330,7 @@
 }
 
 .applyBtn:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.15);
-  color: #FFFFFF;
+  background: #F8FAFC;
+  border-color: var(--secondary-color);
+  color: var(--primary-color);
 }

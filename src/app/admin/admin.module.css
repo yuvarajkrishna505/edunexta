@@ -54,12 +54,12 @@
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(107, 70, 193, 0.1);
+  border: 1px solid rgba(107, 70, 193, 0.2);
   border-radius: 50px;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--accent-color);
+  color: var(--secondary-color);
   margin: 0 auto 20px;
   width: max-content;
   text-transform: uppercase;
@@ -68,7 +68,7 @@
 .title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 16px;
 }
 
@@ -94,8 +94,8 @@
 
 .tabsRow {
   display: flex;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
   padding: 6px;
   border-radius: 14px;
   gap: 6px;
@@ -123,7 +123,7 @@
 }
 
 .tabBtn:hover {
-  color: #FFFFFF;
+  color: var(--primary-color);
 }
 
 .activeTab {
@@ -154,7 +154,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid #E2E8F0;
   padding-bottom: 16px;
   margin-bottom: 20px;
 }
@@ -162,7 +162,7 @@
 .listHeader h3 {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--text-primary);
 }
 
 .addBtn {
@@ -198,15 +198,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 14px 18px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 10px;
   transition: all 0.2s ease;
 }
 
 .recordItem:hover {
-  border-color: rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--secondary-color);
+  background: #F8FAFC;
 }
 
 .recordMeta {
@@ -220,7 +220,7 @@
 .recordTitle {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--text-primary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -278,8 +278,8 @@
 .editorForm h3 {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #FFFFFF;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+  border-bottom: 1px solid #E2E8F0;
   padding-bottom: 16px;
 }
 
@@ -298,10 +298,10 @@
 .inputGroup input, .inputGroup textarea {
   width: 100%;
   padding: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
-  color: #FFFFFF;
+  color: var(--text-primary);
   font-size: 0.9rem;
 }
 
@@ -360,7 +360,7 @@
 .emptyEditor h4 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--text-primary);
 }
 
 .emptyEditor p {

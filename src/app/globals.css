@@ -2,24 +2,25 @@
 
 :root {
   /* Dynamic Palette */
-  --primary-color: #031636;       /* Deep Obsidian Navy */
+  --primary-color: #0F172A;       /* Primary Dark Text */
   --secondary-color: #6B46C1;     /* Regal Purple */
   --accent-color: #DD7900;        /* Sunset Amber */
+  --success-color: #16A34A;
   --accent-rgb: 221, 121, 0;
   --secondary-rgb: 107, 70, 193;
-  --primary-rgb: 3, 22, 54;
+  --primary-rgb: 15, 23, 42;
   
-  --bg-gradient: radial-gradient(circle at 50% 0%, #0c1830 0%, #031127 40%, #010610 100%);
-  --text-primary: #F7FAFC;
-  --text-secondary: #94A3B8;
-  --text-muted: #64748B;
+  --bg-gradient: none;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
   
   /* Glassmorphism system */
-  --glass-bg: rgba(255, 255, 255, 0.02);
-  --glass-border: rgba(255, 255, 255, 0.05);
-  --glass-border-hover: rgba(255, 255, 255, 0.12);
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(226, 232, 240, 0.8);
+  --glass-border-hover: rgba(107, 70, 193, 0.2);
   --glass-blur: blur(14px);
-  --glass-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+  --glass-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
   --glass-glow: rgba(107, 70, 193, 0.08);
   --glass-accent-glow: rgba(221, 121, 0, 0.08);
 
@@ -50,7 +51,7 @@ html, body {
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: #010610;
+  background-color: #FFFFFF;
   background-image: var(--bg-gradient);
   color: var(--text-primary);
   font-family: var(--font-body);
@@ -64,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #FFFFFF;
+  color: var(--text-primary);
 }
 
 a {
@@ -89,13 +90,13 @@ button, input, select, textarea {
 
 .glass-panel:hover {
   border-color: var(--glass-border-hover);
-  box-shadow: 0 15px 45px -5px rgba(0, 0, 0, 0.6), 0 0 25px 0 var(--glass-glow);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025), 0 0 25px 0 var(--glass-glow);
   transform: translateY(-4px);
 }
 
 .glass-accent-panel {
   background: rgba(221, 121, 0, 0.02);
-  border: 1px solid rgba(221, 121, 0, 0.08);
+  border: 1px solid rgba(221, 121, 0, 0.1);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-radius: var(--border-radius-md);
@@ -104,8 +105,8 @@ button, input, select, textarea {
 }
 
 .glass-accent-panel:hover {
-  border-color: rgba(221, 121, 0, 0.2);
-  box-shadow: 0 15px 45px -5px rgba(0, 0, 0, 0.6), 0 0 25px 0 var(--glass-accent-glow);
+  border-color: rgba(221, 121, 0, 0.3);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025), 0 0 25px 0 var(--glass-accent-glow);
   transform: translateY(-4px);
 }
 

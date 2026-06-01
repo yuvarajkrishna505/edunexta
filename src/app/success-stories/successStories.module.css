@@ -38,12 +38,12 @@
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(107, 70, 193, 0.1);
+  border: 1px solid rgba(107, 70, 193, 0.2);
   border-radius: 50px;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--accent-color);
+  color: var(--secondary-color);
   margin: 0 auto 20px;
   width: max-content;
   text-transform: uppercase;
@@ -52,7 +52,7 @@
 .title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 16px;
 }
 
@@ -94,7 +94,7 @@
 .calcTitle {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 8px;
 }
 
@@ -115,7 +115,7 @@
   align-items: center;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 12px;
 }
 
@@ -129,7 +129,7 @@
 .rangeInput {
   width: 100%;
   height: 6px;
-  background: rgba(255, 255, 255, 0.08);
+  background: #E2E8F0;
   border-radius: 3px;
   outline: none;
   -webkit-appearance: none;
@@ -169,7 +169,7 @@
   align-items: center;
   gap: 10px;
   font-size: 0.8rem;
-  color: #E2E8F0;
+  color: var(--text-secondary);
 }
 
 .checkItem svg {
@@ -178,8 +178,8 @@
 
 /* Calc Output Chart */
 .calcOutputBox {
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
   padding: 24px;
   display: flex;
@@ -242,13 +242,13 @@
 
 .barBefore {
   width: 100%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
   border-radius: 8px 8px 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-size: 0.8rem;
   font-weight: 600;
   padding-bottom: 10px;
@@ -257,8 +257,8 @@
 
 .barAfter {
   width: 100%;
-  background: linear-gradient(180deg, var(--accent-color) 0%, rgba(221, 121, 0, 0.2) 100%);
-  border: 1px solid rgba(221, 121, 0, 0.4);
+  background: linear-gradient(180deg, var(--secondary-color) 0%, rgba(107, 70, 193, 0.8) 100%);
+  border: 1px solid var(--secondary-color);
   border-radius: 8px 8px 0 0;
   display: flex;
   align-items: center;
@@ -267,7 +267,7 @@
   font-size: 0.8rem;
   font-weight: 700;
   padding-bottom: 10px;
-  box-shadow: 0 0 20px rgba(221, 121, 0, 0.2);
+  box-shadow: 0 0 20px rgba(107, 70, 193, 0.2);
   transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -286,7 +286,7 @@
 .sectionHeader h2 {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 10px;
 }
 
@@ -332,7 +332,7 @@
 .storyName {
   font-size: 1rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--text-primary);
 }
 
 .storySub {
@@ -357,7 +357,7 @@
 .storyText {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #E2E8F0;
+  color: var(--text-secondary);
   position: relative;
   z-index: 10;
   font-style: italic;
@@ -368,8 +368,8 @@
   grid-template-columns: 1fr;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 20px;
@@ -401,7 +401,7 @@
 .transVal {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--text-primary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -470,7 +470,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #010610;
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
 }
 
 .thumbImg {
@@ -514,7 +515,7 @@
 .videoMeta h4 {
   font-size: 1rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 6px;
 }
 

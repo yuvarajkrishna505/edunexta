@@ -38,12 +38,12 @@
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(107, 70, 193, 0.1);
+  border: 1px solid rgba(107, 70, 193, 0.2);
   border-radius: 50px;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--accent-color);
+  color: var(--secondary-color);
   margin: 0 auto 20px;
   width: max-content;
   text-transform: uppercase;
@@ -52,7 +52,7 @@
 .title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 16px;
 }
 
@@ -109,7 +109,7 @@
 .cardTitle {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 12px;
 }
 
@@ -134,7 +134,7 @@
 .sectionHeader h2 {
   font-size: 2rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 10px;
 }
 
@@ -172,14 +172,14 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #010610;
+  background: #FFFFFF;
   border: 2px solid var(--secondary-color);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--secondary-color);
   z-index: 10;
-  box-shadow: 0 0 10px rgba(107, 70, 193, 0.3);
+  box-shadow: 0 0 10px rgba(107, 70, 193, 0.1);
 }
 
 .markerIcon {
@@ -204,7 +204,7 @@
 .eventTitle {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 8px;
 }
 
@@ -255,7 +255,7 @@
 .mentorName {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 4px;
 }
 
@@ -282,8 +282,8 @@
 
 .skillTag {
   font-size: 0.75rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
   padding: 4px 10px;
   border-radius: 6px;
   color: var(--text-secondary);

@@ -4,8 +4,8 @@
   left: 0;
   width: 100vw;
   height: 72px;
-  background: rgba(1, 6, 16, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 999;
@@ -13,9 +13,9 @@
 }
 
 .scrolled {
-  background: rgba(3, 22, 54, 0.85);
-  border-bottom-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom-color: #E2E8F0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   height: 64px;
 }
 
@@ -35,19 +35,17 @@
   gap: 8px;
   font-weight: 800;
   font-size: 1.4rem;
-  color: #FFFFFF;
+  color: var(--text-primary);
   font-family: var(--font-heading);
 }
 
 .logoIcon {
-  color: var(--accent-color);
+  color: var(--secondary-color);
   animation: pulse 2s infinite ease-in-out;
 }
 
 .logoText {
-  background: linear-gradient(135deg, #FFFFFF 50%, var(--text-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-primary);
 }
 
 .badge {
@@ -83,11 +81,11 @@
 }
 
 .link:hover {
-  color: #FFFFFF;
+  color: var(--secondary-color);
 }
 
 .activeLink {
-  color: #FFFFFF;
+  color: var(--secondary-color);
 }
 
 .activeLink::after {
@@ -126,7 +124,7 @@
 .mobileTrigger {
   background: transparent;
   border: none;
-  color: #FFFFFF;
+  color: var(--text-primary);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -144,10 +142,10 @@
   top: 72px;
   left: 0;
   width: 100vw;
-  background: rgba(3, 22, 54, 0.98);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid #E2E8F0;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -161,11 +159,11 @@
   font-weight: 600;
   color: var(--text-secondary);
   padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid #E2E8F0;
 }
 
 .mobileActiveLink {
-  color: #FFFFFF;
+  color: var(--secondary-color);
   border-bottom-color: var(--secondary-color);
 }
 
@@ -213,11 +211,11 @@
 .whatsappTooltip {
   position: absolute;
   left: 70px;
-  background: #031636;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   padding: 8px 12px;
   border-radius: 8px;
-  color: #FFFFFF;
+  color: var(--text-primary);
   font-size: 0.8rem;
   font-weight: 600;
   white-space: nowrap;
@@ -225,7 +223,7 @@
   pointer-events: none;
   transition: all 0.3s ease;
   transform: translateX(-10px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .whatsappWidget:hover .whatsappTooltip {

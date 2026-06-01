@@ -1,6 +1,6 @@
 .footer {
-  background: #010610;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: #F8FAFC;
+  border-top: 1px solid #E2E8F0;
   padding: 80px 0 30px;
   color: var(--text-secondary);
   position: relative;
@@ -46,13 +46,11 @@
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-primary);
 }
 
 .logoText {
-  background: linear-gradient(135deg, #FFFFFF 50%, var(--text-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-primary);
 }
 
 .logoBadge {
@@ -83,7 +81,7 @@
   align-items: center;
   gap: 8px;
   font-size: 0.8rem;
-  color: #E2E8F0;
+  color: var(--text-secondary);
   font-weight: 500;
 }
 
@@ -101,7 +99,7 @@
   font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--text-primary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -119,7 +117,7 @@
 }
 
 .link:hover {
-  color: #FFFFFF;
+  color: var(--secondary-color);
   transform: translateX(4px);
 }
 
@@ -150,7 +148,7 @@
 }
 
 .contactLink:hover {
-  color: #FFFFFF;
+  color: var(--secondary-color);
 }
 
 .whatsappBtn {
@@ -159,8 +157,8 @@
   justify-content: center;
   gap: 8px;
   padding: 12px 20px;
-  background: rgba(37, 211, 102, 0.08);
-  border: 1px solid rgba(37, 211, 102, 0.3);
+  background: #FFFFFF;
+  border: 1px solid #25D366;
   border-radius: 8px;
   color: #25D366;
   font-weight: 600;
@@ -172,11 +170,11 @@
 .whatsappBtn:hover {
   background: #25D366;
   color: #FFFFFF;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.1);
 }
 
 .bottomBar {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid #E2E8F0;
   padding-top: 40px;
 }
 
@@ -215,9 +213,9 @@
 }
 
 .bottomLink:hover {
-  color: #FFFFFF;
+  color: var(--secondary-color);
 }
 
 .divider {
-  color: rgba(255, 255, 255, 0.1);
+  color: #E2E8F0;
 }
