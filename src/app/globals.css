@@ -16,11 +16,11 @@
   --text-muted: #94A3B8;
   
   /* Glassmorphism system */
-  --glass-bg: rgba(255, 255, 255, 0.8);
-  --glass-border: rgba(226, 232, 240, 0.8);
+  --glass-bg: #FFFFFF;
+  --glass-border: #E2E8F0;
   --glass-border-hover: rgba(107, 70, 193, 0.2);
   --glass-blur: blur(14px);
-  --glass-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --glass-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
   --glass-glow: rgba(107, 70, 193, 0.08);
   --glass-accent-glow: rgba(221, 121, 0, 0.08);
 
@@ -90,23 +90,36 @@ button, input, select, textarea {
 
 .glass-panel:hover {
   border-color: var(--glass-border-hover);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025), 0 0 25px 0 var(--glass-glow);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.025), 0 0 25px 0 var(--glass-glow);
   transform: translateY(-4px);
 }
 
 .glass-accent-panel {
-  background: rgba(221, 121, 0, 0.02);
-  border: 1px solid rgba(221, 121, 0, 0.1);
+  background: #FFFFFF;
+  border: 1px solid var(--glass-border);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-radius: var(--border-radius-md);
   box-shadow: var(--glass-shadow);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.glass-accent-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+  border-radius: 0 0 3px 3px;
+  opacity: 0.6;
 }
 
 .glass-accent-panel:hover {
-  border-color: rgba(221, 121, 0, 0.3);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025), 0 0 25px 0 var(--glass-accent-glow);
+  border-color: rgba(107, 70, 193, 0.2);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.025), 0 0 25px 0 var(--glass-glow);
   transform: translateY(-4px);
 }
 

@@ -84,7 +84,6 @@ export default function CourseDetailPage() {
 
       {/* Hero Header */}
       <section className={styles.heroSection}>
-        <div className={styles.ambientGlow}></div>
         <div className={styles.container}>
           <button onClick={() => router.push('/courses')} className={styles.breadcrumb}>
             <ArrowLeft size={14} /> Back to Catalog
