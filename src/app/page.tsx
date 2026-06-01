@@ -10,7 +10,6 @@ import styles from './home.module.css';
 import Modal from '@/components/ui/Modal';
 import EnquiryForm from '@/components/core/EnquiryForm';
 import Toast from '@/components/ui/Toast';
-import AiTools from '@/components/sections/AiTools';
 import SchemaMarkup from '@/components/core/SchemaMarkup';
 
 export default function HomePage() {
@@ -189,19 +188,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* AI Marketing Tools Showcase Sandbox */}
-      <section className={styles.sandboxSection}>
-        <div className={styles.sectionContainer}>
-          <div className={styles.sectionHeader}>
-            <Cpu className={styles.sectionHeaderIcon} size={28} />
-            <h2 className={styles.sectionTitle}>Hands-On AI Automation Training</h2>
-            <p className={styles.sectionSubtitle}>
-              No more theoretical lectures. Learn to create programmatic pipelines that execute actual digital campaigns at high speed.
-            </p>
-          </div>
-          <AiTools />
-        </div>
-      </section>
 
       {/* Why Choose Us */}
       <section className={styles.whySection}>
