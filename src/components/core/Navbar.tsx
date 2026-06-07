@@ -131,7 +131,7 @@ export default function Navbar() {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/917736204006"
+        href="https://wa.me/919901213373?text=Hi%20EduNexta%20Team%2C%20I%20would%20like%20to%20know%20more%20about%20your%20AI%20Digital%20Marketing%20Program."
         target="_blank"
         rel="noopener noreferrer"
         className={styles.whatsappWidget}
