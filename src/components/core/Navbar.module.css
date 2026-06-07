@@ -189,8 +189,8 @@
   position: fixed;
   bottom: 24px;
   left: 24px;
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: #25D366;
   color: #FFFFFF;
@@ -204,7 +204,7 @@
 }
 
 .whatsappWidget:hover {
-  transform: scale(1.1) rotate(12deg);
+  transform: scale(1.1);
   box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
 }
 
