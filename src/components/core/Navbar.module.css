@@ -231,6 +231,60 @@
   transform: translateX(0);
 }
 
+/* Floating Call Widget */
+.callWidget {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #4C1D95 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(107, 70, 193, 0.3);
+  z-index: 9999;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.callWidget:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 35px rgba(107, 70, 193, 0.5);
+}
+
+.callTooltip {
+  position: absolute;
+  right: 70px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transform: translateX(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.callWidget:hover .callTooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (min-width: 1024px) {
+  .callWidget {
+    display: none;
+  }
+}
+
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.15); filter: drop-shadow(0 0 5px rgba(221, 121, 0, 0.6)); }
